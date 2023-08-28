@@ -41,6 +41,11 @@ const requestlistener = (req,res)=> {
             todos.push(JSON.parse(Buffer.concat(body).toString()));//json.parse string to json
         });
     }
+        // not found
+    else{
+        res.write("Not Found");
+    }
+    
     
     res.end();
 }
