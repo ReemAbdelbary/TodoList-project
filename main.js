@@ -20,7 +20,7 @@ const requestlistener = (req,res)=> {
             body.push(chunk);
         }).on("end",()=>{
             console.log(Buffer.concat(body).toJSON());
-            todos.push(JSON.parse(Buffer.concat(body).toString()));//json.parse string to json
+            todos.push(JSON.parse(Buffer.concat(body).toString()));
         });
     }
 
